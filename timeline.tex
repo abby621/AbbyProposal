@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{pgfgantt}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usetikzlibrary{positioning}
+
+\ganttset{group/.append style={orange},
+milestone/.append style={red},
+progress label node anchor/.append style={text=red}}
+
+\begin{document}
+%    \begin{figure}
+%    \centering
+\subsection*{Project Timeline and Milestones}
+
+This project is organized with an annual cycle of research, evaluation and deployment.  Annual milestones include the submission of research articles at the conclusion of the basic research and algorithm development, and the deployment of algorithmic improvements to the search prototype.  The remaining milestones are quarterly financial reporting and semi-annual progress reports.
+
+\vspace{0.4in}
+
+\begin{ganttchart}[%Specs
+     x unit=0.3cm,
+     y unit title=0.6cm,
+     y unit chart=0.6cm,
+     vgrid,hgrid,
+     title height=1,
+%     title/.style={fill=none},
+     title label font=\bfseries\footnotesize,
+     bar/.style={fill=blue},
+     bar height=0.7,
+%   progress label text={}, 
+     group/.style={fill=none},
+     group right shift=0,
+     group top shift=1.0,
+     group height=.3,
+     group peaks width={0.2},
+     inline]{1}{36}
+    %labels
+    \gantttitle{Project Timeline}{36}\\  % title 1
+    \gantttitle[]{2019}{12}                 % title 2
+    \gantttitle[]{2020}{12}                 % title 2
+    \gantttitle[]{2021}{12} \\              
+    \gantttitle{Q1}{3}                      % title 3
+    \gantttitle{Q2}{3}
+    \gantttitle{Q3}{3}
+    \gantttitle{Q4}{3}
+    \gantttitle{Q1}{3}                      % title 3
+    \gantttitle{Q2}{3}
+    \gantttitle{Q3}{3}
+    \gantttitle{Q4}{3}
+    \gantttitle{Q1}{3}
+    \gantttitle{Q2}{3}
+    \gantttitle{Q3}{3} 
+    \gantttitle{Q4}{3}\\
+    % Setting group if any
+    \gantttitle{Research}{36}\\  % title 1    
+    \ganttgroup[inline=true]{Object-Centric Image Search}{1}{36}\\
+    \ganttbar[inline=false]{Algorithm Development}{1}{9}
+    \ganttbar[inline=false]{Algorithm Development}{13}{21}
+    \ganttbar[inline=false]{Algorithm Development}{25}{33}\\
+    \ganttbar[inline=false]{Evaluation}{10}{11}
+    \ganttbar[inline=false]{Evaluation}{22}{23}
+    \ganttbar[inline=false]{Evaluation}{34}{35}\\        
+    \ganttbar[inline=false]{Prototype Integration}{12}{12}
+    \ganttbar[inline=false]{Prototype Integration}{24}{24}
+    \ganttbar[inline=false]{Prototype Integration}{36}{36}\\
+
+    \ganttgroup[inline=true]{Network Visualization and Explainability}{1}{36}\\
+    \ganttbar[inline=false]{Algorithm Development}{1}{9}
+    \ganttbar[inline=false]{Algorithm Development}{13}{21}
+    \ganttbar[inline=false]{Algorithm Development}{25}{33}\\
+    \ganttbar[inline=false]{Evaluation}{10}{11}
+    \ganttbar[inline=false]{Evaluation}{22}{23}
+    \ganttbar[inline=false]{Evaluation}{34}{35}\\        
+    \ganttbar[inline=false]{Prototype Integration}{12}{12}
+    \ganttbar[inline=false]{Prototype Integration}{24}{24}
+    \ganttbar[inline=false]{Prototype Integration}{36}{36}\\
+
+    \ganttgroup[inline=true]{Adaptation Across Changing Imagery}{1}{36}\\
+    \ganttbar[inline=false]{Algorithm Development}{1}{9}
+    \ganttbar[inline=false]{Algorithm Development}{13}{21}
+    \ganttbar[inline=false]{Algorithm Development}{25}{33}\\
+    \ganttbar[inline=false]{Evaluation}{10}{11}
+    \ganttbar[inline=false]{Evaluation}{22}{23}
+    \ganttbar[inline=false]{Evaluation}{34}{35}\\        
+    \ganttbar[inline=false]{Prototype Integration}{12}{12}
+    \ganttbar[inline=false]{Prototype Integration}{24}{24}
+    \ganttbar[inline=false]{Prototype Integration}{36}{36}\\
+
+    \gantttitle{Dissemination}{36}\\  % title 1    
+    \ganttbar[inline=false]{Prototype Available}{13}{36}\\         
+    \ganttmilestone[inline=false]{Prototype Update}{12}            
+    \ganttmilestone[inline=false]{Prototype Update}{24}                
+    \ganttmilestone[inline=false]{Prototype Update}{36}\\
+    \ganttmilestone[inline=false]{Article Submission}{10}            
+    \ganttmilestone[inline=false]{Article Submission}{22}                
+    \ganttmilestone[inline=false]{Article Submission}{34}\\
+
+    \gantttitle{Reporting}{36}\\  % title 1    
+    \ganttmilestone[inline=false]{Financial Report}{3}                \ganttmilestone[inline=false]{Financial Report}{6}            \ganttmilestone[inline=false]{Financial Report}{9}       
+    \ganttmilestone[inline=false]{Financial Report}{12}        
+    \ganttmilestone[inline=false]{Financial Report}{15} 
+    \ganttmilestone[inline=false]{Financial Report}{18}        
+    \ganttmilestone[inline=false]{Financial Report}{21}
+    \ganttmilestone[inline=false]{Financial Report}{24}        
+    \ganttmilestone[inline=false]{Financial Report}{27}        
+    \ganttmilestone[inline=false]{Financial Report}{30}        
+    \ganttmilestone[inline=false]{Financial Report}{33}        
+    \ganttmilestone[inline=false]{Financial Report}{36}\\
+    \ganttmilestone[inline=false]{Progress Report}{6} 
+    \ganttmilestone[inline=false]{Progress Report}{12} 
+    \ganttmilestone[inline=false]{Progress Report}{18} 
+    \ganttmilestone[inline=false]{Progress Report}{24} 
+    \ganttmilestone[inline=false]{Progress Report}{30}\\
+    \ganttmilestone[inline=false]{Final Report}{36}\\
+\end{ganttchart}
+
+
+\end{document}
